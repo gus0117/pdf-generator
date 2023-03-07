@@ -1,17 +1,11 @@
 import { PDFViewer } from "@react-pdf/renderer"
 import { useState } from "react"
-import img1 from "./assets/img1.png"
-import img2 from "./assets/img2.png"
-import img3 from "./assets/img3.jpg"
-import img4 from "./assets/img4.jpg"
-import img5 from "./assets/img5.jpg"
 import DropZone from "./components/DropZone"
 
 import PdfView from "./components/PdfView"
 import WebContent from "./components/WebContent"
 
 function App() {
-  const [text, setText] = useState("Texto de prueba")
   const [images, setImages] = useState([])
   const [isImagesLoaded, setIsImagesLoaded] = useState(false)
 
@@ -22,7 +16,10 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="container">
+      <h1 className="title-1">PDF Generator</h1>
+      <p className="description-1">Arrastra tus imagenes y seleciona generar PDF. ¡Importante! Debes seleccionar todas las imagenes de una vez.</p>
+      <p className="description-2">El tiempo de generacion de los documentos dependera de tu ordenador. Estamos trabajando en mejorar la experiencia. Gracias por su comprención</p>
       <DropZone generatePdf={generatePdf}/>
       {
         isImagesLoaded ? 

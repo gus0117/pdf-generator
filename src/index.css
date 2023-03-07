@@ -15,9 +15,42 @@
   padding: 5px 8px;
 }
 
-
 .container {
+  padding: 10px 20px;
+  background: #007979;
+  height: 100vh;
+}
+
+.title-1 {
+  margin: 20px auto;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #009b6d;
+  /* offset-x | offset-y | blur-radius | color */
+  text-shadow: 1px 1px 2px black;
+  font-size: 2.5rem;
+}
+
+.description-1, .description-2 {
+  padding-left: 20px;
+  font-size: 1.4rem;
+}
+
+.container-dropzone {
   margin: 10px 20px;
+}
+
+.btn-generate {
+  margin: 20px auto;
+  display: flex;
+  padding: 17px 40px;
+  font-size: 1.8rem;
+  background: #00c210;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  border-color: #fff;
+  border-width: 3px;
 }
 
 .page-container {

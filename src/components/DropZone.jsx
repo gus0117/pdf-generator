@@ -96,19 +96,19 @@ const DropZone = ({ generatePdf }) => {
       ));
     
       return (
-        <section className="container">
+        <section className="container-dropzone">
           <div {...getRootProps({style})}>
             <input {...getInputProps()} />
             <p>Drag 'n' drop some files here, or click to select files</p>
             <em>(Only *.jpeg and *.png images will be accepted)</em>
           </div>
+          <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate">Generar PDF</button>
           <aside>
-            <h4>Accepted files</h4>
+            <h4>Archivos aceptados</h4>
             <ul>{acceptedFileItems}</ul>
             <h4>Rejected files</h4>
             <ul>{fileRejectionItems}</ul>
           </aside>
-          <button onClick={()=>generatePdf(acceptedFiles)}>Generate PDF</button>
         </section>
       );
 }
