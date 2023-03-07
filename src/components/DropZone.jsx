@@ -102,6 +102,7 @@ const DropZone = ({ generatePdf }) => {
             <p>Drag 'n' drop some files here, or click to select files</p>
             <em>(Only *.jpeg and *.png images will be accepted)</em>
           </div>
+          <p className="description-2">El tiempo de generación de los documentos dependera de tu ordenador y la cantidad de imágenes para procesar. Estamos trabajando en mejorar la experiencia. Gracias por su comprención.</p>
           <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate">Generar PDF</button>
           <aside>
             <h4>Archivos aceptados</h4>
