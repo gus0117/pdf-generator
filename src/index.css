@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.navbar button {
+  margin: auto 5px;
+  padding: 5px 8px;
+}
+
+
+.container {
+  margin: 10px 20px;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
