@@ -1,4 +1,4 @@
-import { BlobProvider } from "@react-pdf/renderer"
+import { BlobProvider, PDFDownloadLink } from "@react-pdf/renderer"
 import { useState } from "react"
 import DropZone from "./components/DropZone"
 import PdfView from "./components/PdfView"
@@ -44,6 +44,9 @@ function App() {
                     Ver Documento PDF
                   </a>
                 </div>
+                <PDFDownloadLink document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
+                  <button className="btn-generate">Descargar</button>
+                </PDFDownloadLink>
                 <button className="btn-generate" onClick={() => resetApp()}>Generar otro</button>
               </>
             );
