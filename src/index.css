@@ -79,6 +79,20 @@
   transition: 0.4s;
 }
 
+.btn-generate-disable {
+  margin: 20px auto;
+  display: flex;
+  padding: 17px 40px;
+  font-size: 1.8rem;
+  background: #a7a7a7;
+  color: #ffffffa1;
+  cursor: pointer;
+  border-radius: 7px;
+  border-color: #8f8f8f;
+  border-width: 3px;
+  transition: 0.4s;
+}
+
 .page-container {
   height: 100vh;
   display: flex;

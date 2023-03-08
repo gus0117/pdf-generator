@@ -15,6 +15,11 @@ function App() {
     //console.log(files)
   }
 
+  const resetApp = () => {
+    setImages([])
+    setIsImagesLoaded(false)
+  }
+
   return (
     <div className="container">
       <h1 className="title-1">PDF Generator</h1>
@@ -39,6 +44,7 @@ function App() {
                     Ver Documento PDF
                   </a>
                 </div>
+                <button className="btn-generate" onClick={() => resetApp()}>Generar otro</button>
               </>
             );
           }}
