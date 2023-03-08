@@ -21,7 +21,7 @@ function App() {
       {
         !isImagesLoaded ? 
         <>
-          <p className="description-1">Arrastra tus imagenes y seleciona generar PDF. ¡Importante! Debes seleccionar todas las imagenes de una vez.</p>
+          <p className="description-1">Arrastra tus imágenes y selecciona generar PDF. <span className="highlight">¡Importante! Debes seleccionar todas las imagenes de una vez.</span></p>
           <DropZone generatePdf={generatePdf}/>
         </> :
         null

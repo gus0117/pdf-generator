@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Document, Page, Text, View, Image, StyleSheet } from "@react-pdf/renderer"
 
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 })
 
 const PdfView = ({ images }) => {
-    
+
   return (
     <Document>
         {
