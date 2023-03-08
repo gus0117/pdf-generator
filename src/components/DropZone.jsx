@@ -34,21 +34,22 @@ const DropZone = ({ generatePdf }) => {
 
     /* No entiendo que hace, parece q no es necesario */
     const onDrop = useCallback((acceptedFiles) => {
-        acceptedFiles.forEach((file) => {
+        setFiles([...files, ...acceptedFiles])
+/*         acceptedFiles.forEach((file) => {
           const reader = new FileReader()
     
           reader.onabort = () => console.log('file reading was aborted')
           reader.onerror = () => console.log('file reading has failed')
           reader.onload = () => {
           // Do whatever you want with the file contents
-            setFiles([...files, file])
+            
             const binaryStr = reader.result
             //console.log(files)
           }
           reader.readAsArrayBuffer(file)
-        })
+        }) */
         
-    }, [])
+    }, [files])
 
     const {
         acceptedFiles,
@@ -78,7 +79,7 @@ const DropZone = ({ generatePdf }) => {
       ]);
     
       /* Se podria usar esta lista para indicar el orden */
-      const acceptedFileItems = acceptedFiles.map(file => (
+      const acceptedFileItems = files.map(file => (
         <li key={file.path}>
           {file.path} - {file.size} bytes
         </li>
@@ -103,7 +104,14 @@ const DropZone = ({ generatePdf }) => {
             <em>(Solo imagenes *.jpeg y *.png serán aceptadas)</em>
           </div>
           <p className="description-2">El tiempo de generación de los documentos dependera de tu ordenador y la cantidad de imágenes para procesar. Estamos trabajando en mejorar la experiencia. Gracias por su comprención.</p>
-          <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate">Generar PDF</button>
+          {
+            files.length > 0 ?
+            <>
+              <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate">Generar PDF</button>
+              <button onClick={()=>setFiles([])} className="btn-generate">Limpiar</button>
+            </>:
+            <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate-disabled">Generar PDF</button>
+          }          
           <aside>
             <h4>Archivos aceptados</h4>
             <ul>{acceptedFileItems}</ul>

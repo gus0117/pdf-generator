@@ -79,7 +79,7 @@
   transition: 0.4s;
 }
 
-.btn-generate-disable {
+.btn-generate-disabled {
   margin: 20px auto;
   display: flex;
   padding: 17px 40px;
