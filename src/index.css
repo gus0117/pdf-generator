@@ -46,6 +46,10 @@
   color: #fff;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .container-dropzone {
   margin: 10px 20px;
 }
@@ -75,4 +79,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.btn-show-pdf {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-show-pdf a {
+  text-decoration: none;
+  margin: 20px auto;
+  padding: 17px 40px;
+  font-size: 1.8rem;
+  background: #f0f3bd;
+  color: #028090;
+  cursor: pointer;
+  border-radius: 7px;
+  border-color: #f0f3bd;
+  border-width: 3px;
+  transition: 0.4s;
+}
+
+.btn-show-pdf a:hover {
+  background-color: #fff;
+  transition: 0.4s;
 }
