@@ -121,6 +121,7 @@
 .btn-show-pdf {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .btn-show-pdf a {
@@ -141,4 +142,8 @@
 .btn-show-pdf a:hover {
   transform: scale(1.1);
   transition: 0.4s;
+}
+
+.txt-deco {
+  text-decoration: none;
 }

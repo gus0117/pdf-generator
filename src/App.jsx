@@ -41,10 +41,10 @@ function App() {
                 <p className="description-1 text-center">Ya puedes visualizar tu documento.</p>
                 <div className="btn-show-pdf">
                   <a href={url} target="_blank">
-                    Ver Documento PDF
+                    Ver PDF
                   </a>
                 </div>
-                <PDFDownloadLink document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
+                <PDFDownloadLink className="txt-deco" document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
                   <button className="btn-generate">Descargar</button>
                 </PDFDownloadLink>
                 <button className="btn-generate" onClick={() => resetApp()}>Generar otro</button>
