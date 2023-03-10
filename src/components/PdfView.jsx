@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#E4E4E4'
     },
     image: {
-        minWidth: '600px',
-        minHeight: '800px'
+        width:'100%',
     }
 })
 
@@ -16,13 +15,15 @@ const PdfView = ({ images }) => {
 
   return (
     <Document>
+        
         {
             images.map( img => (
-                <Page size="A4" style={styles.page} key={img.name}>
-                    <Image style={styles.image} src={ URL.createObjectURL(img) } />
+                <Page size="A4" style={styles.page}>
+                    <Image style={styles.image} src={ URL.createObjectURL(img) } key={img.name} />      
                 </Page>
             ))
         }
+        
     </Document>
   )
 }

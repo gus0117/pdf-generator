@@ -107,14 +107,14 @@ const DropZone = ({ generatePdf }) => {
           {
             files.length > 0 ?
             <>
-              <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate">Generar PDF</button>
+              <button onClick={()=>generatePdf(files)} className="btn-generate">Generar PDF</button>
               <button onClick={()=>setFiles([])} className="btn-generate">Limpiar</button>
             </>:
-            <button onClick={()=>generatePdf(acceptedFiles)} className="btn-generate-disabled">Generar PDF</button>
+            <button className="btn-generate-disabled">Generar PDF</button>
           }          
           <aside>
-            <h4>Archivos aceptados</h4>
-            <ul>{acceptedFileItems}</ul>
+            <h4 className='title-2'>Archivos aceptados</h4>
+            <ul className='accepted-files'>{acceptedFileItems}</ul>
             <h4>Archivos rechazados</h4>
             <ul>{fileRejectionItems}</ul>
           </aside>
