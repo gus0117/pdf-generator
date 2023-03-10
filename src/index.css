@@ -44,6 +44,13 @@
   list-style: decimal;
 }
 
+.rejected-files {
+  margin: 20px 30px;
+  font-size: 1.1rem;
+  list-style: decimal;
+  color: #faaa16;
+}
+
 .description-1, .description-2 {
   margin: 10px auto;
   padding-left: 20px;

@@ -113,10 +113,10 @@ const DropZone = ({ generatePdf }) => {
             <button className="btn-generate-disabled">Generar PDF</button>
           }          
           <aside>
-            <h4 className='title-2'>Archivos aceptados</h4>
+            <h4 className='title-2'>Archivos Subidos</h4>
             <ul className='accepted-files'>{acceptedFileItems}</ul>
-            <h4>Archivos rechazados</h4>
-            <ul>{fileRejectionItems}</ul>
+            <h4 className='title-2'>Archivos rechazados</h4>
+            <ul className='rejected-files'>{fileRejectionItems}</ul>
           </aside>
         </section>
       );
