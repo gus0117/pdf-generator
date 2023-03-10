@@ -40,7 +40,7 @@ function App() {
               return (
                 <>
                   <p className="description-1 text-center">Ya puedes visualizar tu documento.</p>
-                  <div className="btn-show-pdf">
+                  <div className="btn-generate">
                     <a href={url} target="_blank">
                       Ver PDF
                     </a>
@@ -50,8 +50,8 @@ function App() {
               );
             }}
           </BlobProvider>
-          <PDFDownloadLink className="txt-deco" document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
-            <button className="btn-generate">Descargar</button>
+          <PDFDownloadLink className="btn-generate" document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
+            <a className="">Descargar</a>
           </PDFDownloadLink>
           <button className="btn-generate" onClick={() => resetApp()}>Generar otro</button>
         </>:

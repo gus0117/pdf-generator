@@ -83,10 +83,17 @@
   background: #f0f3bd;
   color: #028090;
   cursor: pointer;
+  border: none;
   border-radius: 7px;
-  border-color: #f0f3bd;
-  border-width: 3px;
   transition: 0.4s;
+}
+
+.btn-generate a {
+  color: #028090;
+}
+
+a {
+  text-decoration: none;
 }
 
 .btn-generate:hover {
@@ -103,7 +110,6 @@
   font-size: 1.8rem;
   background: #a7a7a7;
   color: #ffffffa1;
-  cursor: pointer;
   border-radius: 7px;
   border-color: #8f8f8f;
   border-width: 3px;
