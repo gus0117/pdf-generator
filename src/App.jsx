@@ -34,24 +34,27 @@ function App() {
       
       {
         isImagesLoaded ? 
-        <BlobProvider document={<PdfView images={images} />}>
-          {({ url, ...rest }) => {
-            return (
-              <>
-                <p className="description-1 text-center">Ya puedes visualizar tu documento.</p>
-                <div className="btn-show-pdf">
-                  <a href={url} target="_blank">
-                    Ver PDF
-                  </a>
-                </div>
-                <PDFDownloadLink className="txt-deco" document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
-                  <button className="btn-generate">Descargar</button>
-                </PDFDownloadLink>
-                <button className="btn-generate" onClick={() => resetApp()}>Generar otro</button>
-              </>
-            );
-          }}
-        </BlobProvider> :
+        <>
+          <BlobProvider document={<PdfView images={images} />}>
+            {({ url }) => {
+              return (
+                <>
+                  <p className="description-1 text-center">Ya puedes visualizar tu documento.</p>
+                  <div className="btn-show-pdf">
+                    <a href={url} target="_blank">
+                      Ver PDF
+                    </a>
+                  </div>
+
+                </>
+              );
+            }}
+          </BlobProvider>
+          <PDFDownloadLink className="txt-deco" document={<PdfView images={images} />} fileName="PDFGenerator.pdf">
+            <button className="btn-generate">Descargar</button>
+          </PDFDownloadLink>
+          <button className="btn-generate" onClick={() => resetApp()}>Generar otro</button>
+        </>:
         null
       }
       {/* {

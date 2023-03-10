@@ -122,12 +122,12 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 120px;
 }
 
 .btn-show-pdf a {
   text-decoration: none;
   width: 300px;
-  margin: 20px auto;
   padding: 17px 40px;
   font-size: 1.8rem;
   background: #f0f3bd;

@@ -17,9 +17,9 @@ const PdfView = ({ images }) => {
     <Document>
         
         {
-            images.map( img => (
-                <Page size="A4" style={styles.page}>
-                    <Image style={styles.image} src={ URL.createObjectURL(img) } key={img.name} />      
+            images.map( (img, index) => (
+                <Page size="A4" style={styles.page} key={index + 1}>
+                    <Image style={styles.image} src={ URL.createObjectURL(img) } />      
                 </Page>
             ))
         }
