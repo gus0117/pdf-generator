@@ -14,7 +14,7 @@ const baseStyle = {
     backgroundColor: '#fafafa',
     color: '#bdbdbd',
     outline: 'none',
-    transition: 'border .24s ease-in-out'
+    transition: 'border .24s ease-in-out',
   };
   
   const focusedStyle = {
@@ -110,7 +110,7 @@ const DropZone = ({ generatePdf }) => {
               <button onClick={()=>generatePdf(files)} className="btn-generate">Generar PDF</button>
               <button onClick={()=>setFiles([])} className="btn-generate">Limpiar</button>
             </>:
-            <button className="btn-generate-disabled">Generar PDF</button>
+            <button className="btn-generate-disabled" disabled="true">Generar PDF</button>
           }          
           <aside>
             <h4 className='title-2'>Archivos Subidos</h4>
