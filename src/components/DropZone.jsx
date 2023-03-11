@@ -103,7 +103,7 @@ const DropZone = ({ generatePdf }) => {
             <p>Arrastra y suelta las imagenes que desees, o haz click y seleccionalos.</p>
             <em>(Solo imagenes *.jpeg y *.png serán aceptadas)</em>
           </div>
-          <p className="description-2">El tiempo de generación de los documentos dependera de tu ordenador y la cantidad de imágenes para procesar. Estamos trabajando en mejorar la experiencia. Gracias por su comprención.</p>
+          <p className="description-1 highlight">¡Importante! El tiempo de generación de los documentos dependera de tu ordenador y la cantidad de imágenes para procesar. Estamos trabajando en mejorar la experiencia. Gracias por su comprención.</p>
           {
             files.length > 0 ?
             <>

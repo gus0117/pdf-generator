@@ -22,11 +22,11 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title-1">PDF Generator</h1>
+      <h1 className="title-1">Imagen a PDF - Generator</h1>
       {
         !isImagesLoaded ? 
         <>
-          <p className="description-1">Arrastra tus imágenes y selecciona generar PDF. <span className="highlight">¡Importante! Debes seleccionar todas las imagenes de una vez.</span></p>
+          <p className="description-1">Arrastra tus imágenes y selecciona generar PDF.</p>
           <DropZone generatePdf={generatePdf}/>
         </> :
         null
